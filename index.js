@@ -74,11 +74,12 @@ try {
 
   /// Rest parameter ///
 
-	(function UseRestParameter() {
+/*	(function UseRestParameter() {
 		// Add just one rest parameter and use the number of elements in this parameter 
 		// (What is the name of that property?) in the return statement to let the test pass.
-		function foo(a, b) {
-			return foo = (a + b);
+		function foo(a, b, ...args) {
+			
+			return a + b + args[3];
 		}
 
 		// Don't make changes below this line	
@@ -87,18 +88,18 @@ try {
     expect(foo(1, 2, '1st', '2nd', '3rd', '4th')).toBe(1 + 2 + 4);
 		
 		solved++;
-	})();
+	})();*/
 
   /// Spread operator ///
 
-  /*
+
 	(function UseSpreadOperator1() {
 		function add(a, b, c) {
 			return a + b + c;
 		}
 
 		let values = [1, 3, 6];
-		
+		add.apply(null, values);
 		// Use spread operator to let the test pass.
 		let result = add(values);
 
@@ -108,7 +109,6 @@ try {
 		
 		solved++;
 	})();
-	*/
 
   /*
 	(function UseSpreadOperator2() {
