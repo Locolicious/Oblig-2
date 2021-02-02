@@ -266,11 +266,7 @@ try {
 		const norwegian = true;
 		
 		// Remove all unnecesary syntax to let the test pass.
-		let city = {
-			name: name,
-			age: age,
-			dutch: !norwegian
-		};
+		let city = {name, age, dutch: !norwegian};
 
 		// Don't make changes below this line	
 		
@@ -282,12 +278,12 @@ try {
 
   /// Object Spread Properties (ES2018) ///
 
-  /*
 	(function UseObjectSpreadProperties1() {
 		let obj = { val: 1 };
 		
 		// Use Object Spread Properties to let the tests succeed.
-		let copy = obj;
+		//let copy = Object.assign({}, obj);
+		let copy = {...obj};
 
 		// Don't make changes below this line	
 		
@@ -298,9 +294,8 @@ try {
 
 		solved++;
 	})();
-	*/
 
-  /*
+  
 	(function UseObjectSpreadProperties2() {
 		let obj1 = { a: 100, b: 2, c: 300 };
 		let obj2 = { b: 0, d: 100, e: 200};
@@ -310,8 +305,7 @@ try {
 		// - Do NOT use Object.assign()
 		// - Do use object spread properties
 		// - Think about the order!
-		let result = { obj1, obj2, obj3 };
-
+		let result = {...obj1, ...obj3, ...obj2};
 		// Don't make changes below this line	
 		
 		expect(result.a).toBe(100);
@@ -322,18 +316,18 @@ try {
 
 		solved++;
 	})();
-	*/
+
 
   ////// BONUS //////
 
   /// Method definitions (bonus) ///
 
-  /*
+  
 	(function UseMethodDefinitions() {
 		// Use method properties to remove unnecessary syntax. DO NOT use arrow functions.
 		let obj = {
-			add: function (a, b) { return a + b; },
-			subtract: function (a, b) { return a - b; }
+			add(a, b) { return a + b; },
+			subtract(a, b) { return a - b; }
 		}
 
 		// Don't make changes below this line	
@@ -343,24 +337,22 @@ try {
 		
 		solvedBonus++;
 	})();
-	*/
 
   /// class (bonus) ///
 
-  /*
-	(function UseClass() {
+
+	/*(function UseClass() {
 		// Let Multiplier be a class with the appropriate methods to succeed.
 		let Multiplier = 'class';
 
 		// Don't make changes below this line	
 		
 		let m = new Multiplier(2);
-		
+
 		expect(m.multiply(3)).toBe(6);
 		
 		solvedBonus++;
 	})();
-	*/
 
   /// Template strings (bonus) ///
 
