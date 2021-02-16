@@ -78,8 +78,8 @@ try {
 		// Add just one rest parameter and use the number of elements in this parameter 
 		// (What is the name of that property?) in the return statement to let the test pass.
 		function foo(a, b, ...c){
-			let sum = c.length;
-			return (a+b+sum);
+			
+			return (a+b+c.length);
 		}
 		// Don't make changes below this line	
 		
@@ -130,8 +130,8 @@ try {
 	(function UseArrow1() {
 		// Rewrite double as arrow function and make the test pass.
 		let double = (x) => {
-			const arrowNum = 2;
-			return arrowNum * x;
+			
+			return 2 * x;
 		};
 		
 		// Don't make changes below this line	
@@ -207,8 +207,9 @@ try {
 		//let add = obj.add;
 
 		//let {name=obj.name, age=obj.age, add=obj.add};
-		let[name,age,add] = [obj.name, obj.age, obj.add];
+		//obj = [obj.name, obj.age, obj.add];
 
+		const {name, age, add} = obj;
 		// Don't make changes below this line	
 		
 		expect(name).toBe('Oslo');
