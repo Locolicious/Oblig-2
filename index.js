@@ -206,10 +206,8 @@ try {
 		//let age = obj.age;
 		//let add = obj.add;
 
-		//let {name=obj.name, age=obj.age, add=obj.add};
-		//obj = [obj.name, obj.age, obj.add];
-
-		const {name, age, add} = obj;
+		const {name=obj.name, age=obj.age, add=obj.add} = obj;
+	
 		// Don't make changes below this line	
 		
 		expect(name).toBe('Oslo');
@@ -220,7 +218,7 @@ try {
 	})();
 
 
-  
+
   (function UseParameterDestructuring1() {
     // Adjust the code to let the test succeed.
 
