@@ -206,7 +206,7 @@ try {
 		//let age = obj.age;
 		//let add = obj.add;
 
-		const {name=obj.name, age=obj.age, add=obj.add} = obj;
+		const {name, age, add} = obj;
 	
 		// Don't make changes below this line	
 		
